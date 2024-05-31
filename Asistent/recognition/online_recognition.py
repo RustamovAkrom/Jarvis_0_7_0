@@ -7,11 +7,7 @@ from speech_recognition import (
 )
 
 
-recognizer = Recognizer()
-micraphone = Microphone()
-
-
-def online_recognition_function() -> str:
+def online_recognition_function(recognizer: Recognizer, microphone: Microphone) -> str:
     """Online recognition on module speach_recognition russian"""
 
     recognizer.dynamic_energy_threshold = False
@@ -21,9 +17,9 @@ def online_recognition_function() -> str:
     active = True
 
     try:
-        with micraphone as source:
+        with microphone as source:
 
-            recognizer.adjust_for_ambient_noise(micraphone, duration=0.5)
+            recognizer.adjust_for_ambient_noise(microphone, duration=0.5)
 
             try:
                 print("Listening...")

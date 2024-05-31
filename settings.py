@@ -4,33 +4,39 @@
 from pathlib import Path
 import random
 
-# Build paths inside the project like this: BASE_DIR / "sundir"
+from dotenv import load_dotenv
+import os
+
+load_dotenv(".env")
+
+# Build paths inside the project like this: BASE_DIR / "sundir".
 BASE_DIR = Path(__file__).resolve().parent
 
 # Offline recognition model dir
-OFFLINE_RECOGNITION_DIR = "modules/vosk-model-small-ru-0.22" # russian small model
+OFFLINE_RECOGNITION_DIR = "modules/vosk-model-small-ru-0.22"  # russian small model.
 
-# proposals dir settings
-TELEGRAM_DIR = "C:/Users/user/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Telegram Desktop/Telegram.lnk"
-YOUTUBE_DIR = "C:/Users/user/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Приложения Chrome/YouTube.lnk"
-GOOGLE_DIR = "C:/Program Files (x86)/Google/Chrome/Application/chrome"
-BROWSER_DIR = "C:/Users/user/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Yandex.lnk"
-MUSICS_DIR = "D:/videos"
-
-# Searching default browser
-DEFAULT_SEARCH_BROWSER = "https://www.google.com/search?q="
-
-# Asistent settings
+# Asistent config
 ASISTENT_NAMES = ("джарвис", "чарльз")
 MULTIPART_SPEACH_ASISTENT_NAME = "aidar"
-ONLINE_RECOGNITION = False  # Online recognition listen
-OFFLINE_RECOGNITION = True  # Offline recognition listen
-LISTEN_COMMANDS_SECCOUND_TIME = 15  # seccund
+ONLINE_RECOGNITION = False  # is online recognition listen.
+OFFLINE_RECOGNITION = True  # is offline recognition listen.
+LISTEN_COMMANDS_SECCOUND_TIME = 20  # listen command sec.
 
-# Default asistent speaker
+# proposals dirs settings.
+TELEGRAM_DIR = os.getenv("TELEGRAM_DIR")
+YOUTUBE_DIR = os.getenv("YOUTUBE_DIR")
+GOOGLE_DIR = os.getenv("GOOGLE_DIR")
+BROWSER_DIR = os.getenv("BROWSER_DIR")
+MUSICS_DIR = os.getenv("MUSICS_DIR")
+
+# Searching default browser.
+DEFAULT_SEARCH_BROWSER = "https://www.google.com/search?q="
+
+
+# Default asistent speaker config.
 SPEAKER_1 = {
     "ACTIVE": True,  # speaker activator
-    "AUDIO_FILES_DIR": "Asistent/media/",  # speaker audio files dir
+    "AUDIO_FILES_DIR": "Asistent/media/",  # speaker audio files dir.
     # audio files control settings
     "AUDIO_FILES": {
         "thanks": "thanks.wav",
@@ -43,10 +49,10 @@ SPEAKER_1 = {
     },
 }
 
-# Windows operation system speaker
+# Windows operation system speaker config.
 SPEAKER_2 = {
-    "ACTIVE": False,  # speaker activator
-    "GENDER": "famale",  # speaker gender (male or famale)
+    "ACTIVE": False,  # speaker activator.
+    "GENDER": "famale",  # speaker gender (male or famale).
     # speak (russian text == famale), (english text == male) values "SPEAK".
     "SPEAK": {
         "thanks": "всегда к вашим услугам сэр",

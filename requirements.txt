@@ -1,0 +1,13 @@
+SpeechRecognition~=3.10.0
+fuzzywuzzy~=0.18.0
+vosk~=0.3.45
+PyAudio~=0.2.13
+wikipedia~=1.4.0
+PyYAML~=6.0.1
+comtypes~=1.2.0
+pycaw~=20240210
+pygame~=2.5.1
+pyttsx3~=2.90
+sounddevice~=0.4.6
+torch~=2.1.0
+python-dotenv~=1.0.1

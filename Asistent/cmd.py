@@ -5,6 +5,7 @@ from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
+import datetime
 import random
 import os
 
@@ -36,28 +37,19 @@ def play_music(
     else:
         path = f" { path }/{ music_list[path_number] }"
 
-    os.startfile(path)
+    return path
 
 
-def Search_On_Browser(search: str, search_browser: str) -> str | None:
+def Search_On_Browser(search: str, search_browser: str) -> None:
     f"""Searching and open browser in url ({search_browser})"""
 
-    try:
-        webbrowser.get().open(search_browser + search)
-
-    except Exception as e:
-        print(f"Error on function (Search_on_Browser): { e }")
+    webbrowser.get().open(search_browser + search)
 
 
-def Search_On_Wikipedia(search: str) -> str | None:
+def Search_On_Wikipedia(search: str) -> str:
     """return text searching on wikipedia summary"""
 
-    try:
-        wikipedia.set_lang("ru")
-        page = wikipedia.page((search))
-        page.html
-        return page.summary
-
-    except Exception as e:
-        print(f"Error on function (Search_On_Wikipedia): { e }")
-        exit(1)
+    wikipedia.set_lang("ru")
+    page = wikipedia.page((search))
+    page.html
+    return page.summary

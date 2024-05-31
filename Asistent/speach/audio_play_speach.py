@@ -1,5 +1,4 @@
 import pygame
-import random
 
 
 def speaker_audio(name: str, audio_files_dir: str, audio_files: dict) -> None:
