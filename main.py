@@ -76,6 +76,7 @@ def cmd(input_voices_cmd: str) -> None:
 
         if searching["value"] == "search_browser":
             try:
+                speaker("ok")
                 Search_On_Browser(searching["search"], settings.DEFAULT_SEARCH_BROWSER)
 
             except Exception as ex:
@@ -85,6 +86,7 @@ def cmd(input_voices_cmd: str) -> None:
         elif searching["value"] == "search_wikipedia":
             try:
                 # Speaker torch
+                speaker("ok")
                 speaker_torch(Search_On_Wikipedia(searching["search"]))
 
             except Exception as ex:
@@ -172,7 +174,7 @@ def cmd(input_voices_cmd: str) -> None:
             speaker("ok")
             os.startfile(ahk_path['ahk_path'])
         
-        elif commanda == "empty_path":
+        elif commanda == "empty_trash":
             speaker("ok")
             os.startfile(ahk_path['ahk_path'])
         
@@ -255,7 +257,8 @@ def main() -> None:
                     ) <= settings.LISTEN_COMMANDS_SECCOUND_TIME:
 
                         voices = recognitions_activator()
-
+                        
+                        print(voices)
                         if voices != "":
                             cmd(voices)
 

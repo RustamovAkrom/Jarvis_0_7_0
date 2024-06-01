@@ -215,6 +215,57 @@ thanks: # Maqtash
   - ты афигенный
   - ты хороший
   - хотя ты молодец
+screenshot: # Ekrani rasimga olish
+  - ahk_path: Asistent/ahk\screenshot.exe
+  - сделай скриншот
+  - сделай снимок экрана
+  - сними экран
+blocking: # Kompyuterni bloklash
+  - ahk_path: Asistent/ahk\blocking.exe
+  - заблокируй компьютер
+  - заблокируй комп
+sleep: # Kompyuterni ochirish
+  - ahk_path: Asistent/ahk\sleep.exe
+  - спящий режим
+  - ждущий режим
+  - иди поспи
+empty_trash: # Korzinkani tozalash
+  - ahk_path: Asistent/ahk\empty_trash.exe
+  - очисти корзину
+  - почисти корзину
+  - очистка корзины
+clipboard: # Bufer obmeni ochish
+  - ahk_path: Asistent/ahk\clipboard.exe
+  - открой буфер обмена
+  - покажи буфер обмена
+  - запусти буфер обмена
+  - буфер обмена
+set_language: # Tilni ozgartirish
+  - ahk_path: Asistent/ahk\set_language.exe
+  - измени язык
+  - смени раскладку
+  - поменяй раскладку
+  - смени язык
+  - поменяй язык
+  - переключи на русский
+  - переключи на английский
+  - смени раскладку на русскую
+  - поменяй раскладку на русскую
+  - поменяй раскладку на английскую
+  - смени раскладку на английскую
+  - смени язык на русский
+  - поменяй язык на русский
+  - смени язык на английский
+  - поменяй язык на английский
+rool_up_windows: # Hamma oynalarni kozdan yopish
+  - ahk_path: Asistent/ahk\roll_up_windows.exe
+  - сверни все окна
+  - сверни окна
+task_manager_open: # Dispetcherni ochish
+  - ahk_path: Asistent/ahk\task_manager_open.exe
+  - запусти диспетчер задач
+  - открой диспетчер задач
+  - диспетчер задач
 
 ~~~
 
